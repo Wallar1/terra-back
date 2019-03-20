@@ -1,5 +1,7 @@
 class Site < ApplicationRecord
 
+  validates :first_name, presence: true
+
   def self.all_sites_with_pos
     @sites = {}
     Site.all.each do |site|
@@ -19,5 +21,9 @@ class Site < ApplicationRecord
       }
     end
     @sites
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
   end
 end

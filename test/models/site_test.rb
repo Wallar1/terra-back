@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class SiteTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  craig = sites(:first)
+
+  test "name_set" do
+    assert craig.first_name == 'Craig'
+  end
 end

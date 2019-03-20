@@ -39,6 +39,7 @@ class SitesController < ApplicationController
   end
 
   def show
+    @success = true
   end
 
   def index
